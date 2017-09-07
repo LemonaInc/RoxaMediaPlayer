@@ -29,13 +29,22 @@ class ViewController: UIViewController  {
         
         self.webview.loadRequest(theURL)
         
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Did fail to load webview function
+    
+    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        let myAlert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    
+    
 
 
 }

@@ -16,6 +16,10 @@
 		EA57DB5C1F61EFAA00F390E3 /* RoxaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DB5B1F61EFAA00F390E3 /* RoxaUITests.swift */; };
 		EA57DB6B1F61FDFD00F390E3 /* Raleway-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB6A1F61FDFD00F390E3 /* Raleway-Regular.otf */; };
 		EA57DB6D1F61FE1700F390E3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB6C1F61FE1700F390E3 /* logo.png */; };
+		EA57DB711F61FEAA00F390E3 /* backdrop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB6F1F61FEAA00F390E3 /* backdrop.jpg */; };
+		EA57DB721F61FEAA00F390E3 /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB701F61FEAA00F390E3 /* stars.jpg */; };
+		EA57DB741F61FF6A00F390E3 /* RoxaGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB731F61FF6A00F390E3 /* RoxaGradient.png */; };
+		EA57DB761F61FF9000F390E3 /* RoxaLogoClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB751F61FF9000F390E3 /* RoxaLogoClear.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		EA57DB5D1F61EFAA00F390E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA57DB6A1F61FDFD00F390E3 /* Raleway-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.otf"; sourceTree = "<group>"; };
 		EA57DB6C1F61FE1700F390E3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		EA57DB6F1F61FEAA00F390E3 /* backdrop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backdrop.jpg; sourceTree = "<group>"; };
+		EA57DB701F61FEAA00F390E3 /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
+		EA57DB731F61FF6A00F390E3 /* RoxaGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoxaGradient.png; sourceTree = "<group>"; };
+		EA57DB751F61FF9000F390E3 /* RoxaLogoClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoxaLogoClear.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,10 @@
 		EA57DB6E1F61FE1B00F390E3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA57DB751F61FF9000F390E3 /* RoxaLogoClear.png */,
+				EA57DB731F61FF6A00F390E3 /* RoxaGradient.png */,
+				EA57DB6F1F61FEAA00F390E3 /* backdrop.jpg */,
+				EA57DB701F61FEAA00F390E3 /* stars.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			files = (
 				EA57DB461F61EFAA00F390E3 /* LaunchScreen.storyboard in Resources */,
 				EA57DB6D1F61FE1700F390E3 /* logo.png in Resources */,
+				EA57DB721F61FEAA00F390E3 /* stars.jpg in Resources */,
+				EA57DB741F61FF6A00F390E3 /* RoxaGradient.png in Resources */,
 				EA57DB431F61EFAA00F390E3 /* Assets.xcassets in Resources */,
 				EA57DB6B1F61FDFD00F390E3 /* Raleway-Regular.otf in Resources */,
 				EA57DB411F61EFAA00F390E3 /* Main.storyboard in Resources */,
+				EA57DB711F61FEAA00F390E3 /* backdrop.jpg in Resources */,
+				EA57DB761F61FF9000F390E3 /* RoxaLogoClear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

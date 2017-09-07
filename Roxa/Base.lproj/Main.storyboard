@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAG-QZ-wfg">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -59,7 +64,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="VY1-if-ipR" kind="show" id="QIr-BN-oLi"/>
+                                    <segue destination="GAG-QZ-wfg" kind="show" id="vsa-ac-78M"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,12 +86,12 @@
                                 <exclude reference="gPd-9B-fed"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="7bE-sy-gTs"/>
+                                <exclude reference="9z3-cP-ivt"/>
                                 <exclude reference="YFE-ZB-WBR"/>
                                 <exclude reference="cR0-gU-Xoa"/>
                                 <exclude reference="hun-ii-xSh"/>
                                 <exclude reference="qpa-Sn-gFt"/>
-                                <exclude reference="7bE-sy-gTs"/>
-                                <exclude reference="9z3-cP-ivt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -94,14 +99,14 @@
                                 <include reference="gPd-9B-fed"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="7bE-sy-gTs"/>
+                                <include reference="9z3-cP-ivt"/>
                                 <exclude reference="6K8-2a-ZWO"/>
                                 <exclude reference="6uH-QT-ZH7"/>
                                 <include reference="YFE-ZB-WBR"/>
                                 <include reference="cR0-gU-Xoa"/>
                                 <include reference="hun-ii-xSh"/>
                                 <include reference="qpa-Sn-gFt"/>
-                                <include reference="7bE-sy-gTs"/>
-                                <include reference="9z3-cP-ivt"/>
                             </mask>
                         </variation>
                     </view>
@@ -116,25 +121,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.05797101449275" y="136.54891304347828"/>
+            <point key="canvasLocation" x="138" y="80"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Wtz-nE-ZHX">
+        <scene sceneID="ZiH-2G-40f">
             <objects>
-                <viewController id="VY1-if-ipR" sceneMemberID="viewController">
+                <viewController id="GAG-QZ-wfg" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jjH-mF-TfS"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q9K-zY-wQp"/>
+                        <viewControllerLayoutGuide type="top" id="QWE-xh-K8M"/>
+                        <viewControllerLayoutGuide type="bottom" id="BdF-tO-3zW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jVL-WF-biv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="IFb-0Y-y2u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYi-WQ-XDm">
+                                <rect key="frame" x="-204" y="-43" width="381" height="64"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="381" id="XQ0-hB-lRb"/>
+                                    <constraint firstAttribute="height" constant="64" id="bn1-ld-zzh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XQ0-hB-lRb"/>
+                                        <exclude reference="bn1-ld-zzh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XQ0-hB-lRb"/>
+                                        <include reference="bn1-ld-zzh"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoxaGradient.png" translatesAutoresizingMaskIntoConstraints="NO" id="vBR-34-BvS">
+                                <rect key="frame" x="-214" y="-53" width="842" height="842"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="842" id="KGo-uV-tQh"/>
+                                    <constraint firstAttribute="height" constant="842" id="bum-GV-TmU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoxaLogoClear.png" translatesAutoresizingMaskIntoConstraints="NO" id="w13-w4-4LY">
+                                <rect key="frame" x="62.666666666666657" y="223.66666666666663" width="289" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="eyx-cf-o6P"/>
+                                    <constraint firstAttribute="width" constant="289" id="tcD-WS-3w9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5e-hR-qJT">
+                                <rect key="frame" x="16.666666666666657" y="486" width="381" height="64"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="381" id="KoM-iw-coc"/>
+                                    <constraint firstAttribute="height" constant="64" id="wSf-cH-Ui7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Launch Player">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="IEk-qu-0SQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e5e-hR-qJT" firstAttribute="centerY" secondItem="IFb-0Y-y2u" secondAttribute="centerY" constant="150" id="A3j-mD-fSx"/>
+                            <constraint firstItem="w13-w4-4LY" firstAttribute="centerY" secondItem="IFb-0Y-y2u" secondAttribute="centerY" id="GoG-Lu-ewJ"/>
+                            <constraint firstItem="vBR-34-BvS" firstAttribute="centerX" secondItem="IFb-0Y-y2u" secondAttribute="centerX" id="TSo-Ky-BYM"/>
+                            <constraint firstItem="vBR-34-BvS" firstAttribute="centerY" secondItem="IFb-0Y-y2u" secondAttribute="centerY" id="ZmD-V1-owV"/>
+                            <constraint firstItem="w13-w4-4LY" firstAttribute="centerX" secondItem="IFb-0Y-y2u" secondAttribute="centerX" id="yxU-oL-gd6"/>
+                            <constraint firstItem="e5e-hR-qJT" firstAttribute="centerX" secondItem="IFb-0Y-y2u" secondAttribute="centerX" id="z6s-wy-D8t"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lYi-WQ-XDm"/>
+                                <exclude reference="e5e-hR-qJT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="lYi-WQ-XDm"/>
+                                <include reference="e5e-hR-qJT"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2QC-aR-rXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECD-1H-z4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="871" y="152"/>
+            <point key="canvasLocation" x="-629" y="87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RoxaGradient.png" width="1080" height="1080"/>
+        <image name="RoxaLogoClear.png" width="1080" height="1080"/>
+    </resources>
 </document>
