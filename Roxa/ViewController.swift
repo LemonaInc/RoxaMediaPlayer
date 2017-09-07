@@ -9,17 +9,20 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController, UIWebViewDelegate   {
+   
+    @IBOutlet weak var roxaWebView: UIWebView!
+   
+    // Set the webview delgate to self
     
-    
-    @IBOutlet weak var webview: UIWebView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.webview.scalesPageToFit = false
-        self.webview.isMultipleTouchEnabled = false
+        roxaWebView.delegate = self
+
+        self.roxaWebView.scalesPageToFit = false
+        self.roxaWebView.isMultipleTouchEnabled = false
         
     
       //  https://app.outbully.com/admin
@@ -27,10 +30,22 @@ class ViewController: UIViewController  {
         let theURL = URLRequest(url:URL(string: urlPath)!)
         
         
-        self.webview.loadRequest(theURL)
+        self.roxaWebView.loadRequest(theURL)
         
     }
-
+    
+    // Webview did load
+    func webViewDidFinishLoad(webView: UIWebView) {
+        print("webview did finish load!")
+    }
+    
+    
+    // Webview did fail to load with error
+    func webView(webView: UIWebView, didFailLoadWithError error: Error) {
+        print("webview did fail load with error: \(error)")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,10 +53,10 @@ class ViewController: UIViewController  {
     
     // Did fail to load webview function
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    /* func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
         let myAlert = UIAlertController(title: "Alert", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
         self.present(myAlert, animated: true, completion: nil)
-    }
+    } */
     
     
     
