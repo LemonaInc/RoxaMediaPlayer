@@ -1,0 +1,6 @@
+framework module Pods_RoxaUITests {
+  umbrella header "Pods-RoxaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
