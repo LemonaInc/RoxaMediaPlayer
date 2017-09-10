@@ -14,6 +14,11 @@ class ViewController: UIViewController, UIWebViewDelegate   {
    
     @IBOutlet weak var roxaWebView: UIWebView!
    
+    // Define and set icon images for alert views
+    var networkFailedIconImage = UIImage(named:"ic_signal_wifi_off_white_48pt")
+    var loadingIconImage = UIImage(named: "ic_music_video_white_48pt")
+    
+    
     // Set the webview delgate to self
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +49,12 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     // Call this function when the view is loading to display a alert view
     func loadingView() {
         
-        JSSAlertView().show(self, title: "Loading Roxa", noButtons: true, delay: 3)
+        JSSAlertView().show(self,
+        title: "Loading Roxa",
+        noButtons: true,
+        color: UIColorFromHex (0x2F302F, alpha: 1),
+        iconImage: loadingIconImage,
+        delay: 3)
     }
     
     // Check the network call and if there is a connection proceed, if not show a warning
@@ -53,8 +63,10 @@ class ViewController: UIViewController, UIWebViewDelegate   {
       var networkCheckAlertView = JSSAlertView().show(self,
             title: "Network Connection Error",
             text: "Please check your connection",
-            color: UIColorFromHex (0xF95C5C, alpha: 1))
-          //  customIcon:("")
+            color: UIColorFromHex (0xF95C5C, alpha: 1),
+            iconImage: networkFailedIconImage)
+        
+          networkCheckAlertView.setTextTheme(.light)
 
         
     }

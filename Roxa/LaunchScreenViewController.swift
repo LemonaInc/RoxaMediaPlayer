@@ -24,7 +24,7 @@ class LaunchScreenViewController: UIViewController {
         
         var roxaWelcomeAlertView = JSSAlertView().show(self,
        title: "Welcome To Roxa!",
-       text: "Get ready to rock out to your favorite jams with spotify",
+       text: "Get ready to rock out to your favorite jams with Spotify",
        color: UIColorFromHex (0xED2E9C, alpha: 1),
        iconImage: welcomeIcon)
         
