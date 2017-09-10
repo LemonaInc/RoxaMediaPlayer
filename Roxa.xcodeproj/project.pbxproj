@@ -10,6 +10,7 @@
 		2DC05EAC164FABBB4AA2A234 /* Pods_RoxaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FDE84AC124AA7CE5735FC2 /* Pods_RoxaTests.framework */; };
 		85FD696B277CEEB27F33DCDA /* Pods_RoxaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD685B02D695240918BBDB8A /* Pods_RoxaUITests.framework */; };
 		C450346329E4E73C9DDDB420 /* Pods_Roxa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922D8D7D094D4BFB1BFF903D /* Pods_Roxa.framework */; };
+		EA4905651F65F85B009544E7 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4905641F65F85B009544E7 /* LaunchScreenViewController.swift */; };
 		EA57DB3C1F61EFAA00F390E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DB3B1F61EFAA00F390E3 /* AppDelegate.swift */; };
 		EA57DB3E1F61EFAA00F390E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DB3D1F61EFAA00F390E3 /* ViewController.swift */; };
 		EA57DB411F61EFAA00F390E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB3F1F61EFAA00F390E3 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		CD685B02D695240918BBDB8A /* Pods_RoxaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoxaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FDE84AC124AA7CE5735FC2 /* Pods_RoxaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoxaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC832FDA4AA48308455B064 /* Pods-Roxa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roxa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Roxa/Pods-Roxa.debug.xcconfig"; sourceTree = "<group>"; };
+		EA4905641F65F85B009544E7 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		EA57DB381F61EFAA00F390E3 /* Roxa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roxa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA57DB3B1F61EFAA00F390E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA57DB3D1F61EFAA00F390E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EA57DB3B1F61EFAA00F390E3 /* AppDelegate.swift */,
+				EA4905641F65F85B009544E7 /* LaunchScreenViewController.swift */,
 				EA57DB3D1F61EFAA00F390E3 /* ViewController.swift */,
 				EAA077F81F65F0A800DD1C8A /* NetworkReachability.swift */,
 				EA57DB3F1F61EFAA00F390E3 /* Main.storyboard */,
@@ -506,6 +509,7 @@
 			files = (
 				EA57DB3E1F61EFAA00F390E3 /* ViewController.swift in Sources */,
 				EA57DB3C1F61EFAA00F390E3 /* AppDelegate.swift in Sources */,
+				EA4905651F65F85B009544E7 /* LaunchScreenViewController.swift in Sources */,
 				EAA077F91F65F0A800DD1C8A /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,16 +15,14 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     @IBOutlet weak var roxaWebView: UIWebView!
    
     // Set the webview delgate to self
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         roxaWebView.delegate = self
         self.roxaWebView.scalesPageToFit = false
         self.roxaWebView.isMultipleTouchEnabled = false
-        
-        // http://localhost:8888/main.html
-
+      
     }
     
     
@@ -53,11 +51,9 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     func networkCheck() {
         
       var networkCheckAlertView = JSSAlertView().show(self,
-            title: "Network Connection Failed",
+            title: "Network Connection Error",
             text: "Please check your connection",
-            color: UIColorFromHex (0xF95C5C, alpha: 1)
-            
-            )
+            color: UIColorFromHex (0xF95C5C, alpha: 1))
           //  customIcon:("")
 
         

@@ -116,7 +116,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="roxaWebView" destination="IGR-PZ-911" id="Nd4-3D-4NT"/>
+                        <outlet property="roxaWebView" destination="IGR-PZ-911" id="gzr-yn-NRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,9 +124,27 @@
             <point key="canvasLocation" x="138" y="80"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="K6i-8j-lCK">
+            <objects>
+                <viewController id="jl7-9o-cgE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jG3-FM-zG2"/>
+                        <viewControllerLayoutGuide type="bottom" id="WM1-S8-m1x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mSM-SM-U7d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdc-ZV-EAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="923" y="168"/>
+        </scene>
+        <!--Launch Screen View Controller-->
         <scene sceneID="ZiH-2G-40f">
             <objects>
-                <viewController id="GAG-QZ-wfg" sceneMemberID="viewController">
+                <viewController id="GAG-QZ-wfg" customClass="LaunchScreenViewController" customModule="Roxa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QWE-xh-K8M"/>
                         <viewControllerLayoutGuide type="bottom" id="BdF-tO-3zW"/>
