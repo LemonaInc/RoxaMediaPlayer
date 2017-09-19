@@ -34,7 +34,7 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     override func viewDidAppear(_ animated: Bool) {
        
         // Define the url to be displayed
-        let urlPath:String = "http://jaxonstevens.com"
+        let urlPath:String = "http://www.roxa.me"
         // Make a URL request and set the url path
         let roxaURL = URLRequest(url:URL(string: urlPath)!)
         // load the url defined
@@ -49,12 +49,15 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     // Call this function when the view is loading to display a alert view
     func loadingView() {
         
-        JSSAlertView().show(self,
+       var loadingAlertView = JSSAlertView().show(self,
         title: "Loading Roxa",
         noButtons: true,
         color: UIColorFromHex (0x2F302F, alpha: 1),
         iconImage: loadingIconImage,
         delay: 3)
+        
+        loadingAlertView.setTextTheme(.light)
+
     }
     
     // Check the network call and if there is a connection proceed, if not show a warning
