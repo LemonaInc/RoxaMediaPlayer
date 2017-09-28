@@ -22,18 +22,25 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     // Set the webview delgate to self
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Create a timer to check the network connection again
+        
+        let checkNetworkTimer = Timer.scheduledTimer(
+        
+            timeInterval: 2.0, target: self, selector: #selector(ViewController.networkCheck),
+            userInfo: nil, repeats: true)
+    
+        
         
         roxaWebView.delegate = self
         self.roxaWebView.scalesPageToFit = false
         self.roxaWebView.isMultipleTouchEnabled = false
-      
+        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-       
-        // Define the url to be displayed
+       // Define the url to be displayed
         let urlPath:String = "http://www.roxa.me"
         // Make a URL request and set the url path
         let roxaURL = URLRequest(url:URL(string: urlPath)!)
@@ -43,11 +50,14 @@ class ViewController: UIViewController, UIWebViewDelegate   {
         // Call the loading view function
         loadingView()
         // Call the network check function
+
         
     }
     
     // Call this function when the view is loading to display a alert view
     func loadingView() {
+        
+        networkCheck()
         
        var loadingAlertView = JSSAlertView().show(self,
         title: "Loading Roxa",
@@ -63,14 +73,25 @@ class ViewController: UIViewController, UIWebViewDelegate   {
     // Check the network call and if there is a connection proceed, if not show a warning
     func networkCheck() {
         
-      var networkCheckAlertView = JSSAlertView().show(self,
-            title: "Network Connection Error",
+        // Network Reached Image for JSS Popup
+        let networkReachedImage = UIImage(named:"ic_signal_wifi_off_white")
+        
+        // If the network connection is true the do
+        if NetworkReachability.isConnectedToNetwork() == true
+        {
+        }
+            // If the network conenction cannot be reached or fails then do
+        else
+        {
+            
+            var networkCheckAlertView = JSSAlertView().show(self,
+             title: "Network Connection Error",
             text: "Please check your connection",
             color: UIColorFromHex (0xF95C5C, alpha: 1),
             iconImage: networkFailedIconImage)
-        
-          networkCheckAlertView.setTextTheme(.light)
-
+            
+            networkCheckAlertView.setTextTheme(.light)
+        }
         
     }
     

@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         
-        var roxaWelcomeAlertView = JSSAlertView().show(self,
+      var roxaWelcomeAlertView = JSSAlertView().show(self,
        title: "Welcome To Roxa!",
        text: "Get ready to rock out to your favorite jams!",
        color: UIColorFromHex (0xED2E9C, alpha: 1),
