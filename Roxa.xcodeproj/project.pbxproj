@@ -25,6 +25,8 @@
 		EA57DB741F61FF6A00F390E3 /* RoxaGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB731F61FF6A00F390E3 /* RoxaGradient.png */; };
 		EA57DB761F61FF9000F390E3 /* RoxaLogoClear.png in Resources */ = {isa = PBXBuildFile; fileRef = EA57DB751F61FF9000F390E3 /* RoxaLogoClear.png */; };
 		EAA077F91F65F0A800DD1C8A /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA077F81F65F0A800DD1C8A /* NetworkReachability.swift */; };
+		EAAA88351F7D9EDF001FFBBF /* SliderDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAA88341F7D9EDF001FFBBF /* SliderDrawerViewController.swift */; };
+		EAEFF5EA1F871A66007101E3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFF5E91F871A66007101E3 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		EA57DB731F61FF6A00F390E3 /* RoxaGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoxaGradient.png; sourceTree = "<group>"; };
 		EA57DB751F61FF9000F390E3 /* RoxaLogoClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RoxaLogoClear.png; sourceTree = "<group>"; };
 		EAA077F81F65F0A800DD1C8A /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		EAAA88341F7D9EDF001FFBBF /* SliderDrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderDrawerViewController.swift; sourceTree = "<group>"; };
+		EAEFF5E91F871A66007101E3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,9 +159,11 @@
 			children = (
 				EA57DB3B1F61EFAA00F390E3 /* AppDelegate.swift */,
 				EA4905641F65F85B009544E7 /* LaunchScreenViewController.swift */,
-				EA57DB3D1F61EFAA00F390E3 /* ViewController.swift */,
 				EAA077F81F65F0A800DD1C8A /* NetworkReachability.swift */,
 				EA57DB3F1F61EFAA00F390E3 /* Main.storyboard */,
+				EA57DB3D1F61EFAA00F390E3 /* ViewController.swift */,
+				EAEFF5E91F871A66007101E3 /* WebViewController.swift */,
+				EAAA88341F7D9EDF001FFBBF /* SliderDrawerViewController.swift */,
 				EA57DB441F61EFAA00F390E3 /* LaunchScreen.storyboard */,
 				EA57DB421F61EFAA00F390E3 /* Assets.xcassets */,
 				EA57DB6E1F61FE1B00F390E3 /* Images */,
@@ -508,9 +514,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA57DB3E1F61EFAA00F390E3 /* ViewController.swift in Sources */,
+				EAEFF5EA1F871A66007101E3 /* WebViewController.swift in Sources */,
 				EA57DB3C1F61EFAA00F390E3 /* AppDelegate.swift in Sources */,
 				EA4905651F65F85B009544E7 /* LaunchScreenViewController.swift in Sources */,
 				EAA077F91F65F0A800DD1C8A /* NetworkReachability.swift in Sources */,
+				EAAA88351F7D9EDF001FFBBF /* SliderDrawerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45J9WDN6PB;
 				INFOPLIST_FILE = Roxa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VFS.Roxa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -677,6 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45J9WDN6PB;
 				INFOPLIST_FILE = Roxa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VFS.Roxa;
 				PRODUCT_NAME = "$(TARGET_NAME)";

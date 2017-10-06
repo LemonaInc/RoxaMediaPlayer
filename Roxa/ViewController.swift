@@ -9,57 +9,50 @@
 import UIKit
 import WebKit
 import JSSAlertView
+import JavaScriptCore
 
-class ViewController: UIViewController, UIWebViewDelegate   {
-   
-    @IBOutlet weak var roxaWebView: UIWebView!
+class ViewController: UIViewController {
+    @IBOutlet weak var roxaWebView: WKWebView!
    
     // Define and set icon images for alert views
     var networkFailedIconImage = UIImage(named:"ic_signal_wifi_off_white_48pt")
     var loadingIconImage = UIImage(named: "ic_music_video_white_48pt")
     
+
     
     // Set the webview delgate to self
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Create a timer to check the network connection again
-        
         let checkNetworkTimer = Timer.scheduledTimer(
-        
             timeInterval: 2.0, target: self, selector: #selector(ViewController.networkCheck),
             userInfo: nil, repeats: true)
     
-        
-        
-        roxaWebView.delegate = self
-        self.roxaWebView.scalesPageToFit = false
+       // roxaWebView.delegate = self
+      //  self.roxaWebView.scalesPageToFit = false
         self.roxaWebView.isMultipleTouchEnabled = false
-        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
        // Define the url to be displayed
-        let urlPath:String = "http://www.roxa.me"
+        let urlPath:String = "http://localhost:8888/player.php"
         // Make a URL request and set the url path
         let roxaURL = URLRequest(url:URL(string: urlPath)!)
         // load the url defined
-        self.roxaWebView.loadRequest(roxaURL)
-        
+        self.roxaWebView.load(roxaURL)
         // Call the loading view function
         loadingView()
         // Call the network check function
-
-        
     }
+    
     
     // Call this function when the view is loading to display a alert view
     func loadingView() {
         
         networkCheck()
         
-       var loadingAlertView = JSSAlertView().show(self,
+        var loadingAlertView = JSSAlertView().show(self,
         title: "Loading Roxa",
         noButtons: true,
         color: UIColorFromHex (0x2F302F, alpha: 1),

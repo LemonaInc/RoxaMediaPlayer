@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAG-QZ-wfg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAG-QZ-wfg">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roxa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="Roxa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,20 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGR-PZ-911">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uE-rO-sX8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="N54-5j-rRJ"/>
-                                    <constraint firstAttribute="width" constant="375" id="esh-wb-guD"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="N54-5j-rRJ"/>
-                                        <exclude reference="esh-wb-guD"/>
-                                    </mask>
-                                </variation>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPd-9B-fed">
                                 <rect key="frame" x="97" y="606.66666666666663" width="181" height="54"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,16 +69,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6K8-2a-ZWO"/>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6uH-QT-ZH7"/>
                             <constraint firstItem="gPd-9B-fed" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7bE-sy-gTs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="300"/>
                             </constraint>
                             <constraint firstItem="gPd-9B-fed" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9z3-cP-ivt"/>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YFE-ZB-WBR"/>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cR0-gU-Xoa"/>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hun-ii-xSh"/>
-                            <constraint firstItem="IGR-PZ-911" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="qpa-Sn-gFt"/>
+                            <constraint firstItem="0uE-rO-sX8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nmk-tZ-C5n"/>
+                            <constraint firstItem="0uE-rO-sX8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rtf-Vm-tbt"/>
+                            <constraint firstItem="0uE-rO-sX8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bMA-Tx-Hej"/>
+                            <constraint firstItem="0uE-rO-sX8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="gHK-6h-qND"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -93,10 +85,6 @@
                             <mask key="constraints">
                                 <exclude reference="7bE-sy-gTs"/>
                                 <exclude reference="9z3-cP-ivt"/>
-                                <exclude reference="YFE-ZB-WBR"/>
-                                <exclude reference="cR0-gU-Xoa"/>
-                                <exclude reference="hun-ii-xSh"/>
-                                <exclude reference="qpa-Sn-gFt"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -106,12 +94,6 @@
                             <mask key="constraints">
                                 <include reference="7bE-sy-gTs"/>
                                 <include reference="9z3-cP-ivt"/>
-                                <exclude reference="6K8-2a-ZWO"/>
-                                <exclude reference="6uH-QT-ZH7"/>
-                                <include reference="YFE-ZB-WBR"/>
-                                <include reference="cR0-gU-Xoa"/>
-                                <include reference="hun-ii-xSh"/>
-                                <include reference="qpa-Sn-gFt"/>
                             </mask>
                         </variation>
                     </view>
@@ -121,30 +103,30 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="roxaWebView" destination="IGR-PZ-911" id="gzr-yn-NRd"/>
+                        <outlet property="roxaView" destination="0uE-rO-sX8" id="dzx-Q2-vND"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="80"/>
+            <point key="canvasLocation" x="223.91304347826087" y="78.668478260869577"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="K6i-8j-lCK">
+        <scene sceneID="2Q3-s7-7nn">
             <objects>
-                <viewController id="jl7-9o-cgE" sceneMemberID="viewController">
+                <viewController id="AUt-Ik-KTd" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jG3-FM-zG2"/>
-                        <viewControllerLayoutGuide type="bottom" id="WM1-S8-m1x"/>
+                        <viewControllerLayoutGuide type="top" id="bYn-nV-AKY"/>
+                        <viewControllerLayoutGuide type="bottom" id="7iq-Wd-1pt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mSM-SM-U7d">
+                    <view key="view" contentMode="scaleToFill" id="ieF-K6-Fzb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdc-ZV-EAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZx-Nz-5j8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="168"/>
+            <point key="canvasLocation" x="-303" y="753"/>
         </scene>
         <!--Launch Screen View Controller-->
         <scene sceneID="ZiH-2G-40f">
