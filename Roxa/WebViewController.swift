@@ -30,8 +30,7 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
         )
         contentController.addUserScript(userScript)
         contentController.add(
-            self,
-            name: "callbackHandler"
+            self,name: "callbackHandler"
         )
         
         var config = WKWebViewConfiguration()
@@ -48,6 +47,11 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
         var url = NSURL(string:"http://localhost:8888/player.php")
         var req = NSURLRequest(url:url as! URL)
         self.webView!.load(req as URLRequest)
@@ -57,10 +61,8 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
             timeInterval: 2.0, target: self, selector: #selector(ViewController.networkCheck),
             userInfo: nil, repeats: true)
         
-        // roxaWebView.delegate = self
-        //  self.roxaWebView.scalesPageToFit = false
-        //self.WebView.isMultipleTouchEnabled = false
-   
+        loadingView()
+
     }
     
     
