@@ -19,8 +19,10 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
     @IBOutlet var roxaView : UIView! = nil
     var webView: WKWebView?
     
-    override func loadView() {
-        super.loadView()
+    // VIEW DID LOAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         
         var contentController = WKUserContentController();
         var userScript = WKUserScript(
@@ -40,19 +42,13 @@ class WebViewController: UIViewController, WKScriptMessageHandler {
             frame: self.roxaView.bounds,
             configuration: config
         )
-        self.view = self.webView!
-    }
-    
-   // VIEW DID LOAD
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-
+        self.view = self
+            .webView!
     }
     
     override func viewDidAppear(_ animated: Bool) {
         
-        var url = NSURL(string:"http://localhost:8888/player.php")
+        var url = NSURL(string:"http://www.roxa.me/player.php")
         var req = NSURLRequest(url:url as! URL)
         self.webView!.load(req as URLRequest)
         
